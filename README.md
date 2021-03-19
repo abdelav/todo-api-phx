@@ -2,13 +2,13 @@
 
 To start your Phoenix server:
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server`
+  * build the Docker image: `docker-compose build`
+  * create the database: `docker-compose run phx mix ecto.create`
+  * run the migrations: `docker-compose run phx mix ecto.migrate`
+  * add some data to the db: `docker-compose run phx mix run priv/repo/seeds.exs`
+  * start the app container `Docker-compose up`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
 ## Learn more
 
